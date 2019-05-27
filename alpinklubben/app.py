@@ -1,6 +1,7 @@
 ###################
 ##### Imports #####
 ###################
+#!/usr/bin/env python3
 
 from myproject import app, db
 from flask import render_template, url_for, redirect, session
