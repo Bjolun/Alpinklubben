@@ -9,5 +9,6 @@ wtforms - pip install WTForms,
 flask-wtf - pip install Flask-WTF,
 sqlalchemy - pip install SQLAlchemy,
 flask-sqlalchemy -  pip install Flask-SQLAlchemy,
-flask-migrate - pip install Flask-Migrate.
+flask-migrate - pip install Flask-Migrate,
+flask-login - pip install flask-login.
 
