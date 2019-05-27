@@ -1,6 +1,7 @@
 ###################
 ##### imports #####
 ###################
+#!/usr/bin/env python3
 
 from myproject import db
 
