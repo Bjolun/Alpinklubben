@@ -1,0 +1,14 @@
+{% extends "base.html"%}
+{% block content %}
+<h1>Bestill pakke</h1>
+<div class="jumbotron">
+  <p id="descrip">Velg pakke fra listen nedenfor for å legge inn din bestilling. Betales når
+  utstyret hentes hos oss. Alle dine bestillinger kan ses fra "Min side"</p>
+  <form method="POST">
+    {{form.hidden_tag()}}
+    {{form.package.label}}{{form.package()}}
+    {{form.date.label}}{{form.date()}}
+    {{form.submit()}}
+  </form>
+</div>
+{% endblock%}

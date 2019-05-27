@@ -1,0 +1,147 @@
+{%extends 'base.html'%}
+{%block content%}
+<h1>Skiutleie</h1>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col-8">
+      <p id="descrip_skileie">I Moss Alpintklubb tilbyr vi en rekke forskjellige pakker til utleie. Om du
+        kommer alene eller sammen med hele familien har vi tilbud som passer til alle. Pakkene inneholder
+        alt man trenger for en dag i bakken: ski, støvler, staver og hjelm. Vi har mye utstyr tilgjengelig,
+        og finner utstyr som passer for dere når dere besøker oss. Dersom du har med eget utstyr, men
+        kanskje mangler hjelm eller staver, så kan du ta kontakt med oss så ordner vi det du mangler.
+        Utstyret er av høy kvalitet.  </p>
+    </div>
+    <div class="col-4">
+      <img src="/static/equipment.jpg" width="250px">
+    </div>
+  </div>
+</div>
+
+<hr width="700">
+{% if session['brukernavn'] %}
+<div class="card-columns" align="center">
+  <div class="card" style="width: 18rem;">
+    <img src="/static/card1.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title" id="card_h5">Pakke: Single</h5>
+      <p class="card-text" id="card_p">Pakke for en person. Inneholder: Et par alpinski, et par støvler, et par skistaver og en hjelm.</p>
+      <a href="{{url_for('order')}}" class="btn btn-primary">Bestill</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img src="/static/card2.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title" id="card_h5">Pakke: Duo</h5>
+      <p class="card-text" id="card_p">Pakke for to personer. Inneholder: To par alpinski, to par støvler, to par skistaver og to hjelmer.</p>
+      <a href="{{url_for('order')}}" class="btn btn-primary">Bestill</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img src="/static/card3.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title" id="card_h5">Pakke: Trio</h5>
+      <p class="card-text" id="card_p">Pakke for tre personer. Inneholder: Tre par alpinski, tre par støvler, tre par skistaver og tre hjelmer.</p>
+      <a href="{{url_for('order')}}" class="btn btn-primary">Bestill</a>
+    </div>
+  </div>
+</div>
+
+<div class="card-columns" align="center">
+  <div class="card" style="width: 18rem;">
+    <img src="/static/card4.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title" id="card_h5">Pakke: Quad</h5>
+      <p class="card-text" id="card_p">Pakke for fire personer. Inneholder: Fire par alpinski, fire par støvler, fire par skistaver og fire hjelmer.</p>
+      <a href="{{url_for('order')}}" class="btn btn-primary">Bestill</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img src="/static/card5.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title" id="card_h5">Pakke: Penta</h5>
+      <p class="card-text" id="card_p">Pakke for fem personer. Inneholder: Fem par alpinski, fem par støvler, fem par skistaver og fem hjelmer.</p>
+      <a href="{{url_for('order')}}" class="btn btn-primary">Bestill</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img src="static/card6.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title" id="card_h5">Pakke: Custom</h5>
+      <p class="card-text" id="card_p">Dersom dere er grupper på fler enn 5 kan dere ta kontakt med oss på telefon: 40414243 for et spesialtilbud!</p>
+      <a href="{{url_for('order')}}" class="btn btn-primary">Bestill</a>
+    </div>
+  </div>
+</div>
+{% else %}
+<div class="card-columns" align="center">
+  <div class="card" style="width: 18rem;">
+    <img src="/static/card1.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title" id="card_h5">Pakke: Single</h5>
+      <p class="card-text" id="card_p">Pakke for en person. Inneholder: Et par alpinski, et par støvler, et par skistaver og en hjelm.</p>
+      <a href="{{url_for('login')}}" class="btn btn-primary">Bestill</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img src="/static/card2.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title" id="card_h5">Pakke: Duo</h5>
+      <p class="card-text" id="card_p">Pakke for to personer. Inneholder: To par alpinski, to par støvler, to par skistaver og to hjelmer.</p>
+      <a href="{{url_for('login')}}" class="btn btn-primary">Bestill</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img src="/static/card3.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title" id="card_h5">Pakke: Trio</h5>
+      <p class="card-text" id="card_p">Pakke for tre personer. Inneholder: Tre par alpinski, tre par støvler, tre par skistaver og tre hjelmer.</p>
+      <a href="{{url_for('login')}}" class="btn btn-primary">Bestill</a>
+    </div>
+  </div>
+</div>
+
+<div class="card-columns" align="center">
+  <div class="card" style="width: 18rem;">
+    <img src="/static/card4.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title" id="card_h5">Pakke: Quad</h5>
+      <p class="card-text" id="card_p">Pakke for fire personer. Inneholder: Fire par alpinski, fire par støvler, fire par skistaver og fire hjelmer.</p>
+      <a href="{{url_for('login')}}" class="btn btn-primary">Bestill</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img src="/static/card5.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title" id="card_h5">Pakke: Penta</h5>
+      <p class="card-text" id="card_p">Pakke for fem personer. Inneholder: Fem par alpinski, fem par støvler, fem par skistaver og fem hjelmer.</p>
+      <a href="{{url_for('login')}}" class="btn btn-primary">Bestill</a>
+    </div>
+  </div>
+  <div class="card" style="width: 18rem;">
+    <img src="static/card6.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title" id="card_h5">Pakke: Custom</h5>
+      <p class="card-text" id="card_p">Dersom dere er grupper på fler enn 5 kan dere ta kontakt med oss på telefon: 40414243 for et spesialtilbud!</p>
+      <a href="{{url_for('login')}}" class="btn btn-primary">Bestill</a>
+    </div>
+  </div>
+</div>
+{% endif %}
+
+<footer>
+  <br>
+  <p id="footertext">Laget av egen interesse basert på en prosjektoppgave fra NTNU.</p>
+  <hr width=300px color=#F5FFFA>
+  <p id="footertext">Siden er for en fiktiv alpintklubb, og er laget av <b>Bjørn Arild Lunde</b></p>
+  <div class="row">
+    <div class="column">
+      <img src="/static/flask.png" width="40" class="center">
+    </div>
+    <div class="column">
+      <img src="/static/Python.png" width="40" class="center">
+    </div>
+  </div>
+</footer>
+
+{%endblock%}

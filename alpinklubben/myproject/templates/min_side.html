@@ -1,0 +1,40 @@
+{%extends 'base.html'%}
+{%block content%}
+
+<h1>Velkommen, {{user.name}}</h1>
+<div class="row">
+  <div class="column">
+
+    <p id="descrip_reg"><b>Kontoinformasjon:</b></p>
+    <p id="descrip_reg">Brukernavn: {{user.username}}</p>
+    <p id="descrip_reg">E-post: {{user.email}}</p>
+    <p id="descrip_reg">Passord: {{user.password}}</p>
+  </div>
+    <hr>
+  <div class="column">
+
+    <p id="descrip_reg"><b>Dine bestillinger:</b></p>
+
+    <!--Se under metoden i my_page i app.py for info om hvorfor vi kan bruke order her.-->
+    {% for bestillinger in order%}
+    <hr width="50px">
+    <p id="descrip_reg"><b>Pakke:</b> {{bestillinger.package}}</p>
+    <p id="descrip_reg"><b>Dato:</b> {{bestillinger.date}}</p>
+    {%endfor%}
+  </div>
+</div>
+<footer>
+  <br>
+  <p id="footertext">Laget av egen interesse basert på en prosjektoppgave fra NTNU.</p>
+  <hr width=300px color=#F5FFFA>
+  <p id="footertext">Siden er for en fiktiv alpintklubb, og er laget av <b>Bjørn Arild Lunde</b></p>
+  <div class="row">
+    <div class="column">
+      <img src="/static/flask.png" width="40" class="center">
+    </div>
+    <div class="column">
+      <img src="/static/Python.png" width="40" class="center">
+    </div>
+  </div>
+</footer>
+{%endblock%}

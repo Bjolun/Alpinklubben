@@ -1,0 +1,83 @@
+.navbar-nav.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
+    font-family: 'Oswald';
+    font-size: 25px;
+}
+
+.carousel-inner {
+  border-radius: 10px;
+  background-color: rgba(0,0,0,0);
+  overflow: hidden;
+}
+
+h1{
+  color: #808080;
+  text-align: center;
+  font-family: 'Oswald';
+}
+#descrip{
+  color: #808080;
+  text-align: left;
+  font-family: 'Oswald';
+  font-size: 20px;
+  margin:30px;
+  padding: 0px 25px;
+}
+
+#descrip_skileie{
+  color: #808080;
+  text-align: left;
+  font-family: 'Oswald';
+  font-size: 20px;
+  margin:30px;
+  padding: 0px 50px 0px 10px;
+}
+
+#carouselh5{
+  font-size:40px;
+  font-family: 'Oswald';
+}
+
+#carouselp{
+  font-size:16px;
+  font-family: 'Oswald';
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body{
+  color: #F5FFFA;
+}
+
+#footertext{
+  color: #F5FFFA;
+  font-size: 12px;
+}
+
+footer {
+  background: #808080;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+.column {
+  float: left;
+  width: 50%;
+  padding: 10px;
+}
+
+#card_h5{
+  color: #808080;
+  font-family: 'Oswald';
+}
+
+#card_p{
+  color: #808080;
+  font-family: 'Oswald';
+}

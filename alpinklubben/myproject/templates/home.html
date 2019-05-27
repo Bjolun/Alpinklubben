@@ -1,0 +1,69 @@
+{%extends 'base.html'%}
+{%block content%}
+<h1>Velkommen til Moss Alpintklubb!</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <p id="descrip">Vi i Moss Alpintklubb bryr oss om at akkurat DU skal ha en god skiopplevelse.
+      Det er derfor viktig for oss at bakkene til enhver tid er i topp stand, og at tilbudene vi kan gi deg
+       og din familie som besøkene hos oss, oppfyller kravene til de fleste!</p>
+    </div>
+  </div>
+</div>
+
+<div id="carouselExampleIndicators" class="carousel slide" style="width: 680px; margin: 0 auto" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img class="d-block w-100" src="/static/carousel6.jpg" alt="First slide">
+      <div class="carousel-caption d-none d-md-block">
+          <h5 id="carouselh5">Flotte løyper!</h5>
+          <p id="carouselp">Prøv våre flotte løyper i Moss! Det blir kjørt opp og preppet av profesjonelle kjørere daglig!</p>
+        </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="/static/carousel2.jpg" alt="Second slide">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 id="carouselh5">Raske heiser!</h5>
+        <p id="carouselp">Vårt heisanlegg er nylig oppgradert, og er i verdensklasse!</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="/static/carousel3.jpg" alt="Third slide">
+      <div class="carousel-caption d-none d-md-block">
+        <h5 id="carouselh5">Nyt god mat i vår restaurant!</h5>
+        <p id="carouselp">Vår restaurant tilbyr mat for enhver smak! Vi tilbyr også drikkevarer for både voksne og barn!</p>
+  </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+<br>
+ <footer>
+   <br>
+   <p id="footertext">Laget av egen interesse basert på en prosjektoppgave fra NTNU.</p>
+   <hr width=300px color=#F5FFFA>
+   <p id="footertext">Siden er for en fiktiv alpintklubb, og er laget av <b>Bjørn Arild Lunde</b></p>
+   <div class="row">
+     <div class="column">
+       <img src="/static/flask.png" width="40" class="center">
+     </div>
+     <div class="column">
+       <img src="/static/Python.png" width="40" class="center">
+     </div>
+   </div>
+ </footer>
+{%endblock%}

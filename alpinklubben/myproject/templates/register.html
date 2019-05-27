@@ -1,0 +1,35 @@
+{% extends "base.html"%}
+{%block content%}
+
+<h1>Registrer ny bruker</h1>
+<p id="descrip">Her kan du registrer deg som bruker slik at du kan bestille en av våre pakker, og oppleve
+vårt skianlegg i all sin prakt! <b>NB: Passord blir lagret i klartekst, velg noe enkelt</b></p>
+
+<form method="POST" align="center">
+  {{form.hidden_tag()}}
+  {{form.username.label}}{{form.username()}}
+  <br>
+  {{form.name.label}}{{form.name()}}
+  <br>
+  {{form.email.label}}{{form.email()}}
+  <br>
+  {{form.password.label}}{{form.password()}}
+  <br>
+  {{form.submit_form()}}
+</form>
+<br>
+<footer>
+  <br>
+  <p id="footertext">Laget av egen interesse basert på en prosjektoppgave fra NTNU.</p>
+  <hr width=300px color=#F5FFFA>
+  <p id="footertext">Siden er for en fiktiv alpintklubb, og er laget av <b>Bjørn Arild Lunde</b></p>
+  <div class="row">
+    <div class="column">
+      <img src="/static/flask.png" width="40" class="center">
+    </div>
+    <div class="column">
+      <img src="/static/Python.png" width="40" class="center">
+    </div>
+  </div>
+</footer>
+{%endblock%}

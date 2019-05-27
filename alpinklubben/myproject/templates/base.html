@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Alpinklubben</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!-- Fonts import! -->
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+
+  </head>
+  <body>
+
+    <img src="/static/headerphoto2.png">
+    <p> </p>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav navbar-center">
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('home')}}">Hjem</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('packages')}}">Utleie</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('about')}}">Om oss</a>
+            </li>
+            {% if session['brukernavn'] %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('my_page')}}">Min side</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('logout')}}">Logg ut</a>
+            </li>
+            {% else %}
+            <li class="nav-item">
+              <a class="nav-link" href="{{url_for('login')}}">Logg inn</a>
+            </li>
+            {%endif%}
+          </ul>
+        </div>
+    </nav>
+
+    <hr width="400px">
+
+    <style type="text/css">
+      .navbar-nav.navbar-center {
+          position: absolute;
+          left: 50%;
+          transform: translatex(-50%);
+          font-family: 'Oswald';
+          font-size: 25px;
+      }
+
+      .carousel-inner {
+        border-radius: 10px;
+        background-color: rgba(0,0,0,0);
+        overflow: hidden;
+      }
+
+      h1{
+        color: #808080;
+        text-align: center;
+        font-family: 'Oswald';
+      }
+      #descrip{
+        color: #808080;
+        text-align: left;
+        font-family: 'Oswald';
+        font-size: 20px;
+        margin:30px;
+        padding: 0px 25px;
+      }
+
+      #descrip_skileie{
+        color: #808080;
+        text-align: left;
+        font-family: 'Oswald';
+        font-size: 20px;
+        margin:30px;
+        padding: 0px 50px 0px 10px;
+      }
+
+      #descrip_reg{
+        color: #808080;
+        text-align: center;
+        font-family: 'Oswald';
+        font-size: 20px;
+        margin:30px;
+        padding: 0px 25px;
+      }
+
+      #carouselh5{
+        font-size:40px;
+        font-family: 'Oswald';
+      }
+
+      #carouselp{
+        font-size:16px;
+        font-family: 'Oswald';
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+
+      #footertext{
+        color: #F5FFFA;
+        font-size: 12px;
+      }
+
+      footer {
+        background: #808080;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        text-align: center;
+      }
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+      }
+
+      #card_h5{
+        color: #808080;
+        font-family: 'Oswald';
+      }
+
+      #card_p{
+        color: #808080;
+        font-family: 'Oswald';
+      }
+    </style>
+
+
+    {%block content%}
+
+    {%endblock%}
+  </body>
+</html>

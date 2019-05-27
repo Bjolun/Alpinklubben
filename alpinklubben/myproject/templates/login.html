@@ -1,0 +1,29 @@
+{%extends 'base.html'%}
+{%block content%}
+<h1>Logg inn</h1>
+<form method="POST" align="center">
+  {{form.hidden_tag()}}
+  {{form.username.label}}{{form.username()}}
+  <br>
+  {{form.password.label}}{{form.password()}}
+  <br>
+  {{form.submit()}}
+  </form>
+  <hr>
+  <h1>Har du ikke bruker?</h1>
+  <p id="descrip_reg">Klikk på linken for å <a href="{{url_for('register')}}" id="reglink"> registrere </a> deg! </p>
+<footer>
+  <br>
+  <p id="footertext">Laget av egen interesse basert på en prosjektoppgave fra NTNU.</p>
+  <hr width=300px color=#F5FFFA>
+  <p id="footertext">Siden er for en fiktiv alpintklubb, og er laget av <b>Bjørn Arild Lunde</b></p>
+  <div class="row">
+    <div class="column">
+      <img src="/static/flask.png" width="40" class="center">
+    </div>
+    <div class="column">
+      <img src="/static/Python.png" width="40" class="center">
+    </div>
+  </div>
+</footer>
+{%endblock%}

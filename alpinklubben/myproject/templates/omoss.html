@@ -1,0 +1,38 @@
+{%extends 'base.html'%}
+{%block content%}
+<h1>Hvem er Moss Alpintklubb?</h1>
+
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <p id="descrip">I 1978 kjøpte vi opp et skogområde hvor vi så stort potensiale for å bygge et
+      skianlegg. Vi satt sammen et av team av erfarne og motiverte arbeidere og instruktører; Moss
+      Alpintklubb var født.</p>
+      <p id="descrip">Over 40 år senere har vi nå et av de største og beste anleggene på Østlandet, og
+      får hver sesong besøk av gjester fra verden over. Du finner oss i utkanten av Moss. </p>
+    </div>
+  </div>
+</div>
+
+<div class="mapouter"><div class="gmap_canvas">
+  <iframe width="400" height="350" id="gmap_canvas" src="https://maps.google.com/maps?q=Moss&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
+  </iframe><a href="https://www.emojilib.com"></a></div><style>.mapouter{position:relative;text-align:right;height:350px;width:400px;}.gmap_canvas {overflow:hidden;background:none!important;height:350px;width:400px;padding:0px 400px}
+  </style>
+</div>
+<br>
+<footer>
+  <br>
+  <p id="footertext">Laget av egen interesse basert på en prosjektoppgave fra NTNU.</p>
+  <hr width=300px color=#F5FFFA>
+  <p id="footertext">Siden er for en fiktiv alpintklubb, og er laget av <b>Bjørn Arild Lunde</b></p>
+  <div class="row">
+    <div class="column">
+      <img src="/static/flask.png" width="40" class="center">
+    </div>
+    <div class="column">
+      <img src="/static/Python.png" width="40" class="center">
+    </div>
+  </div>
+</footer>
+
+{%endblock%}
