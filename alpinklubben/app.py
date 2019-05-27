@@ -9,9 +9,9 @@ from myproject.forms import RegisterForm, LoginForm, OrderPackage
 from myproject.models import User, Orders
 
 
-######################################
-##### Views / currently no forms #####
-######################################
+############################
+##### Views with forms #####
+############################
 
 @app.route('/')
 def home():
